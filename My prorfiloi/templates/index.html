@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Mogal - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="navbar-brand mb-0">
+                    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="GM" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ganumogal.github.io/PORTFOLIO/" target="_blank">Old Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/games">Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                      
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="{{ url_for('download_resume_pdf') }}" class="btn btn-dark btn-sm"><i class="fas fa-file-pdf me-2"></i>PDF CV</a>
+                    <a href="{{ url_for('download_resume_word') }}" class="btn btn-dark btn-sm"><i class="fas fa-file-word me-2"></i>Word CV</a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Ganesh Mogal" class="img-fluid rounded-circle mb-4" style="width: 250px; height: 250px; object-fit: cover;">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4">Hi, I'm Ganesh Mogal</h1>
+                    <p class="lead">B.E in Computer Engineering</p>
+                    <p class="lead">Looking for Full-Time opportunities in the software engineering field. Learning 5+ years in this field, I have gained extensive knowledge and skills in building software.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/ganesh-mogal-1412232a4" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Ganeshmogal" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="profile-view">
+                        <p id="profile-summary">I am a passionate Full Stack Developer with a strong foundation in Python and modern web technologies. With a keen eye for detail and a drive for excellence, I specialize in creating responsive, user-friendly applications that address real-world challenges. My expertise spans both frontend and backend development, allowing me to deliver comprehensive solutions that combine elegant design with robust functionality.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Education</h3>
+                    <div class="education-section">
+                        <div class="education-card">
+                            <h4>AMRUTVAHINI COLLEGE OF ENGINEERING, SANGMNER</h4>
+                            <p class="education-period">2021-2024</p>
+                            <p class="education-details">Branch: Computer Engineering</p>
+                            <p class="education-grade">CGPA: 7.46</p>
+                            <p class="education-courses">Relevant Coursework: Data Structure and Algorithm, Software Engineering, Database Management System, Computer Network, Theory of Computation, Object Oriented Programming, Image and Video Processing</p>
+                        </div>
+                        
+                        <div class="education-card">
+                            <h4>DR. VITTHALRAO VIKHE PATIL INSTITUTE OF TECHNOLOGY & ENGINEERING (POLYTECHNIC) LONI</h4>
+                            <p class="education-period">2019-2021</p>
+                            <p class="education-details">Branch: Computer Engineering</p>
+                            <p class="education-grade">Percentage: 92.74%</p>
+                            <p class="education-courses">Relevant Coursework: Data Structure and Algorithm, Software Engineering</p>
+                        </div>
+                        
+                        <div class="education-card">
+                            <h4>SHREE GANESH JUNIOR COLLEGE KORHALE</h4>
+                            <p class="education-period">2017-2019</p>
+                            <p class="education-details">HSC</p>
+                            <p class="education-grade">Percentage: 60%</p>
+                        </div>
+                        
+                        <div class="education-card">
+                            <h4>NEW ENGLISH SCHOOL KANKURI</h4>
+                            <p class="education-period">2016-2017</p>
+                            <p class="education-details">SSC</p>
+                            <p class="education-grade">Percentage: 71.60%</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3>Resume</h3>
+                        <div class="resume-update">
+                            <div class="d-flex gap-2 mb-3">
+                                <a href="{{ url_for('download_resume_pdf') }}" class="btn btn-primary"><i class="fas fa-file-pdf me-2"></i>PDF Version</a>
+                                <a href="{{ url_for('download_resume_word') }}" class="btn btn-secondary"><i class="fas fa-file-word me-2"></i>Word Version</a>
+                            </div>
+                            <div class="resume-status">
+                                <p class="text-muted"><i class="fas fa-clock me-2"></i>Last updated: <span id="resume-update-date">January 2024</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="education-card">
+                        <h4>Junior Software Developer</h4>
+                        <p class="education-period">October 2024 - Present</p>
+                        <p class="education-details">TH Systems Private Limited, Pune, Maharashtra</p>
+                        <ul class="education-courses">
+                            <li>Developed HRMS application using Angular for web and Ionic for mobile interfaces</li>
+                            <li>Managed MySQL database setup and maintenance of SQL servers</li>
+                            <li>Worked on Python development, dashboard design, and data analysis</li>
+                            <li>Gained experience with AWS and GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="education-card">
+                        <h4>React Developer Intern</h4>
+                        <p class="education-period">June 2024 - September 2024</p>
+                        <p class="education-details">Woyce Technologies And Services Pvt Ltd, Pune, Maharashtra</p>
+                        <ul class="education-courses">
+                            <li>Worked on Quick Reviews project, focusing on UI design and API management</li>
+                            <li>Gained expertise in Tailwind CSS and Material-UI (MUI)</li>
+                            <li>Managed large repositories and improved Postman skills for API testing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="education-card">
+                        <h4>Full Stack Intern</h4>
+                        <p class="education-period">January 2023 - February 2023</p>
+                        <p class="education-details">Sumago Infotech Pvt. Ltd., Nashik, Maharashtra</p>
+                        <ul class="education-courses">
+                            <li>Developed profile management app using PHP and Python</li>
+                            <li>Handled both frontend and backend development</li>
+                            <li>Managed database operations and performed testing and debugging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Frontend</h3>
+                            <ul class="list-unstyled card-text">
+                                <li>HTML, CSS, Tailwind CSS</li>
+                                <li>JavaScript</li>
+                                <li>Angular</li>
+                                <li>Ionic</li>
+                                <li>ReactJS</li>
+                                <li>Bootstrap</li>
+                                <li>Material UI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Backend & Programming</h3>
+                            <ul class="list-unstyled card-text">
+                                <li>Python</li>
+                                <li>C, C++</li>
+                                <li>MySQL, SQL Server</li>
+                                <li>Machine Learning (Scikit-learn, Pandas, Numpy)</li>
+                                <li>TensorFlow, PyTorch</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Tools & Others</h3>
+                            <ul class="list-unstyled card-text">
+                                <li>Git & GitHub</li>
+                                <li>Postman</li>
+                                <li>Playground</li>
+                                <li>API Integration</li>
+                                <li>VPN Extension</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title text-center mb-4">Certifications</h2>
+          <div class="row" id="certifications-list">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow-sm education-card">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">C and C++</h5>
+                  <p class="card-text">03/2022 - 06/2022</p>
+                  <p class="card-text text-muted">Global Soft Computer Technology, Sangamner</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow-sm education-card">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">HTML, CSS, JavaScript, React</h5>
+                  <p class="card-text">03/2023 - 04/2023</p>
+                  <p class="card-text text-muted">Udemy</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow-sm education-card">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">TCS ION Career Edge - Young Professional</h5>
+                  <p class="card-text">2023</p>
+                  <p class="card-text text-muted">TCSION Career Edge</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow-sm education-card">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Database, SQL Server, T-SQL</h5>
+                  <p class="card-text">2025</p>
+                  <p class="card-text text-muted">Udemy</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow-sm education-card">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Ionic – Build iOS, Android & Web Apps</h5>
+                  <p class="card-text">2025</p>
+                  <p class="card-text text-muted">Udemy</p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      
+      
+
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Buying Selling Auction Platform</h5>
+                            <p class="card-subtitle mb-2 text-muted">2021</p>
+                            <p class="card-text">A platform where you can sell, lend, share or give out a commodity for auction. Developed with real-time bidding and secure transactions.</p>
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Technologies Used:</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-primary">HTML</span>
+                                    <span class="badge bg-primary">CSS</span>
+                                    <span class="badge bg-primary">JavaScript</span>
+                                    <span class="badge bg-primary">MySQL</span>
+                                    <span class="badge bg-primary">PHP</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/ganumogal/BUYING-SELLING-AUCTION-PLATFORM.git" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio</h5>
+                            <p class="card-subtitle mb-2 text-muted">2023</p>
+                            <p class="card-text">A professional portfolio website designed to showcase my work with a focus on consistency and professionalism, featuring a polished, user-friendly interface.</p>
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Technologies Used:</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-primary">HTML</span>
+                                    <span class="badge bg-primary">CSS</span>
+                                    <span class="badge bg-primary">JavaScript</span>
+                                    <span class="badge bg-primary">MySQL</span>
+                                    <span class="badge bg-primary">jQuery</span>
+                                    <span class="badge bg-primary">Bootstrap</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/ganumogal/PORTFOLIO" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Depression Detection Using BERT Algorithm</h5>
+                            <p class="card-subtitle mb-2 text-muted">2024</p>
+                            <p class="card-text">A depression detection system leveraging BERT algorithm to analyze social media posts and identify signs of depression, with a web interface for analysis results.</p>
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Technologies Used:</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-primary">Python</span>
+                                    <span class="badge bg-primary">Transformers</span>
+                                    <span class="badge bg-primary">TensorFlow</span>
+                                    <span class="badge bg-primary">PyTorch</span>
+                                    <span class="badge bg-primary">Flask</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="contact-form shadow-lg mx-auto" style="max-width: 600px;">
+                <h2 class="section-title h4 mb-4">Contact Me</h2>
+                <form id="contact-form" action="/send_message" method="POST">
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    <div id="form-message" class="mt-3"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Ganesh Mogal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>
